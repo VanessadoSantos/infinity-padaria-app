@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a Padaria Infinity. Tire dúvidas, faça sugestões ou solicite informações. Estamos aqui para ajudar!">
+  <meta name="keywords" content="contato, suporte, dúvidas, padaria, atendimento">
+  <meta name="author" content="Vanessa Infinity Code">
+  <meta property="og:title" content="Contato - Padaria Infinity">
+  <meta property="og:description" content="Tire suas dúvidas, faça sugestões ou solicite informações. Estamos aqui para ajudar!">
+  <meta property="og:type" content="website">
+  <title>Contato - Padaria Infinity</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/x-icon" href="imagens/logo.png">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-main">Pular para conteúdo principal</a>
+  
+  <a class="whatsapp-float" href="https://wa.me/55119964995899?text=Olá,%20gostaria%20de%20falar%20com%20a%20Padaria%20Infinity" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp da Padaria Infinity">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.946 1.348l-.355.192-.368-.06c-1.286-.264-2.514-.666-3.555-1.303l-.142-.091-.154.164a6.993 6.993 0 00-1.524 3.501c-.423 1.994.3 4.259 1.803 5.748l.155.159-.048.137c-.568 1.622-.923 2.236-1.58 3.772.607-.175 1.19-.435 1.753-.768l.131-.09.145.04c2.363.786 4.806.48 6.57-.923l.151-.114.157.044c1.913.56 3.97.56 5.883 0l.157-.044.151.114c1.764 1.403 4.207 1.71 6.57.923l.145-.04.131.09c.563.333 1.146.593 1.753.768-.657-1.536-1.012-2.15-1.58-3.772l-.048-.137.155-.159c1.503-1.489 2.226-3.754 1.803-5.748a6.993 6.993 0 00-1.524-3.501l-.142-.091-.154.164c-1.041.637-2.269 1.039-3.555 1.303l-.368.06-.355-.192a9.87 9.87 0 00-4.946-1.348z"/></svg>
+  </a>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="logo-box">
+          <img src="imagens/logo.png" alt="Logo Padaria Infinity" class="logo" onerror="this.style.display='none'">
+        </div>
+        <div class="brand-text">
+          <h1>Padaria Infinity</h1>
+          <p>Tradição, Sabor e Qualidade</p>
+        </div>
+      </div>
+      
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Início</a>
+        <a href="produtos.html" class="nav-link">Produtos</a>
+        <a href="encomendas.html" class="nav-link">Encomendas</a>
+        <a href="contatos.html" class="nav-link active">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Entre em Contato</h1>
+        <p>Tire suas dúvidas, faça sugestões ou solicite informações. Estamos aqui para ajudar!</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-form">
+            <h2>Envie sua Mensagem</h2>
+            <form id="contact-form" onsubmit="return false;">
+              <div class="form-group">
+                <label for="contact-nome">Nome</label>
+                <input type="text" id="contact-nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">E-mail</label>
+                <input type="email" id="contact-email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-whatsapp">WhatsApp</label>
+                <input type="tel" id="contact-whatsapp" name="whatsapp" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-motivo">Motivo do Contato</label>
+                <select id="contact-motivo" name="motivo" required>
+                  <option value="">Selecione um motivo</option>
+                  <option value="duvida">Dúvida sobre produtos</option>
+                  <option value="sugestao">Sugestão</option>
+                  <option value="reclamacao">Reclamação</option>
+                  <option value="parceria">Parceria/Fornecedor</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-mensagem">Mensagem</label>
+                <textarea id="contact-mensagem" name="mensagem" rows="5" required></textarea>
+              </div>
+              <button type="button" class="submit-contact-btn" onclick="enviarContato(event)">Enviar Mensagem</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h2>Localização</h2>
+            <div class="map-box">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.097!2d-46.654!3d-23.5505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0x6f24f6e8b5b8e8e!2sPadaria%20Infinity!5e0!3m2!1sen!2sbr!4v1710000000000!5m2!1sen!2sbr" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="contact-details">
+              <h3>Endereço</h3>
+              <p>Rua das Padarias, 123<br>São Paulo, SP - 01234-567</p>
+              <h3>Telefone</h3>
+              <p>(11) 9649-95899</p>
+              <h3>Horário de Funcionamento</h3>
+              <p>Segunda a Sexta: 06:00 - 20:00<br>Sábado: 06:00 - 18:00<br>Domingo: 07:00 - 14:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Padaria Infinity</h3>
+        <p>Tradição em cada fornada, sabor em cada produto.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="encomendas.html">Encomendas</a></li>
+          <li><a href="contatos.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Redes Sociais</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Padaria Infinity" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.795 0-9.733h3.554v1.375c.427-.659 1.191-1.592 2.897-1.592 2.117 0 3.704 1.385 3.704 4.362v5.588zM5.337 8.855c-1.144 0-1.915-.759-1.915-1.71 0-.955.77-1.71 1.96-1.71 1.188 0 1.915.755 1.94 1.71 0 .951-.752 1.71-1.985 1.71zm1.946 11.597H3.392V9.019h3.891v11.433zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Padaria Infinity" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Padaria Infinity" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.117.63c-.794.297-1.473.702-2.082 1.31-.609.609-1.013 1.288-1.31 2.082-.297.788-.5 1.657-.56 2.935C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.263 2.148.56 2.935.297.795.702 1.474 1.31 2.082.609.609 1.288 1.013 2.082 1.31.788.297 1.66.5 2.948.56 1.272.072 1.67.088 4.947.088s3.667-.016 4.947-.072c1.277-.06 2.148-.262 2.935-.56.795-.297 1.474-.702 2.082-1.31.609-.609 1.013-1.288 1.31-2.082.297-.787.5-1.657.56-2.935.072-1.279.088-1.687.088-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.56-2.935-.297-.795-.702-1.474-1.31-2.082-.609-.609-1.288-1.013-2.082-1.31-.788-.297-1.657-.5-2.935-.56C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.070 1.171.054 1.805.244 2.227.408.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.354 1.057.408 2.227.061 1.264.07 1.645.07 4.849 0 3.205-.009 3.584-.070 4.849-.054 1.171-.244 1.804-.408 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.056.354-2.227.408-1.264.061-1.645.07-4.849.07-3.204 0-3.584-.009-4.849-.070-1.171-.054-1.805-.244-2.227-.408-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.354-1.057-.408-2.227-.061-1.264-.07-1.645-.07-4.849 0-3.204.009-3.584.070-4.849.054-1.171.244-1.804.408-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.056-.354 2.227-.408 1.264-.061 1.645-.07 4.849-.07zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok da Padaria Infinity" title="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.66 1.94 2.89 2.89 0 0 1 5.66-1.93v-3.49a6.47 6.47 0 0 0-5.61 5.63 6.37 6.37 0 0 0 9.59-5.84c.23-1.13.36-2.36.36-3.59V6a8.38 8.38 0 0 0-4.1 1.04z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Direitos reservados. Desenvolvido por Vanessa Infinity Code</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

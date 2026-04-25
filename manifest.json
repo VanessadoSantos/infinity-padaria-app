@@ -1,0 +1,21 @@
+{
+  "name": "Padaria Infinity",
+  "short_name": "Infinity",
+  "description": "Pães artesanais e doces premium feitos com ingredientes selecionados",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#faf5ef",
+  "theme_color": "#b47c3f",
+  "icons": [
+    {
+      "src": "imagens/paes.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "imagens/paes.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
