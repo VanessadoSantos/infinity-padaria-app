@@ -1,5 +1,9 @@
 const pedido = [];
 
+function formatPreco(preco) {
+  return preco.toFixed(2).replace('.', ',');
+}
+
 function adicionarProduto(nome, valor) {
   const item = pedido.find((produto) => produto.nome === nome);
   if (item) {
@@ -124,6 +128,83 @@ function calcularTarifaValor() {
   return 5; // Default
 }
 
+function renderIndexProdutos() {
+  const produtosList = document.getElementById('produtos-list');
+  if (!produtosList || !Array.isArray(produtos)) return;
+
+  produtosList.innerHTML = produtos.map((produto) => `
+    <article class="product-card">
+      <img src="${produto.imagem}" alt="${produto.nome}" class="product-image" onerror="this.style.display='none'">
+      <div class="product-info">
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao}</p>
+        <div class="product-price">R$ ${formatPreco(produto.preco)}</div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderProdutoSelect() {
+  const produtoSelect = document.getElementById('produto-select');
+  if (!produtoSelect || !Array.isArray(produtos)) return;
+
+  produtoSelect.innerHTML = `
+    <option value="">Selecione um produto</option>
+    ${produtos.map((produto, index) => `<option value="${index}">${produto.nome} - R$ ${formatPreco(produto.preco)}</option>`).join('')}
+  `;
+}
+
+function renderProductCatalog() {
+  const catalog = document.getElementById('product-catalog');
+  if (!catalog || !Array.isArray(produtos)) return;
+
+  catalog.innerHTML = produtos.map((produto, index) => `
+    <article class="product-card">
+      <img src="${produto.imagem}" alt="${produto.nome}" class="product-image" onerror="this.style.display='none'">
+      <div class="product-info">
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao}</p>
+        <div class="product-price">R$ ${formatPreco(produto.preco)}</div>
+        <button type="button" class="add-to-cart-btn" onclick="adicionarProduto('${produto.nome.replace(/'/g, "\\'")}', ${produto.preco})">Adicionar ao Pedido</button>
+      </div>
+    </article>
+  `).join('');
+}
+
+function confirmarEncomenda(event) {
+  if (event) event.preventDefault();
+
+  const produtoSelect = document.getElementById('produto-select');
+  const quantidadeInput = document.getElementById('quantidade');
+  const resumo = document.getElementById('resumo-encomenda');
+  const resumoProduto = document.getElementById('resumo-produto');
+  const resumoQuantidade = document.getElementById('resumo-quantidade');
+  const resumoTotal = document.getElementById('resumo-total');
+
+  if (!produtoSelect || !quantidadeInput || !resumo || !resumoProduto || !resumoQuantidade || !resumoTotal) return;
+
+  const produtoIndex = Number(produtoSelect.value);
+  const quantidade = Number(quantidadeInput.value);
+
+  if (!produtoSelect.value || Number.isNaN(produtoIndex) || produtoIndex < 0 || produtoIndex >= produtos.length) {
+    alert('Selecione um produto válido.');
+    return;
+  }
+
+  if (quantidade < 1) {
+    alert('Digite uma quantidade válida.');
+    return;
+  }
+
+  const produto = produtos[produtoIndex];
+  const total = produto.preco * quantidade;
+
+  resumoProduto.textContent = `Produto: ${produto.nome} - R$ ${formatPreco(produto.preco)}`;
+  resumoQuantidade.textContent = `Quantidade: ${quantidade}`;
+  resumoTotal.textContent = `Valor Total: R$ ${formatPreco(total)}`;
+  resumo.classList.remove('hidden');
+}
+
 function enviarAgendamento(event) {
   if (event) event.preventDefault();
 
@@ -217,4 +298,7 @@ function enviarContato(event) {
 window.addEventListener('DOMContentLoaded', () => {
   atualizarPedido();
   calcularTarifa();
+  renderIndexProdutos();
+  renderProdutoSelect();
+  renderProductCatalog();
 });

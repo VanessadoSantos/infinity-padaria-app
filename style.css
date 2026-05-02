@@ -630,6 +630,10 @@ section {
   background: #9c6933;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* Contact */
 .contact-section {
   margin-bottom: 80px;
@@ -902,8 +906,6 @@ html {
   a {
     font-weight: 700;
   }
-}
-  gap: 14px;
 }
 
 .logo {

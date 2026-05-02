@@ -50,6 +50,35 @@
       </div>
     </section>
 
+    <section class="products-section">
+      <div class="container">
+        <h2>Escolha seus Produtos</h2>
+        <div id="product-catalog" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <div class="container">
+        <h2>Produtos Selecionados</h2>
+        <div id="pedido-list" class="pedido-list">
+          <p class="empty-cart">Nenhum produto selecionado ainda.</p>
+        </div>
+        <div class="tarifa-info" id="tarifa-info">Digite o CEP com 8 dígitos para calcular a tarifa.</div>
+        <div class="total-section">
+          <span>Total Produtos</span>
+          <strong>R$ <span id="total-produtos">0,00</span></strong>
+        </div>
+        <div class="tarifa-section">
+          <span>Tarifa de entrega</span>
+          <strong>R$ <span id="tarifa-entrega">0,00</span></strong>
+        </div>
+        <div class="grand-total">
+          <span>Total Geral</span>
+          <strong>R$ <span id="total-geral">0,00</span></strong>
+        </div>
+      </div>
+    </section>
+
     <section class="orders-section">
       <div class="container">
         <div class="form-grid">
@@ -84,23 +113,26 @@
           </div>
 
           <div class="order-form">
-            <h2>Produtos Selecionados</h2>
-            <div id="pedido-list" class="pedido-list">
-              <p class="empty-cart">Nenhum produto selecionado ainda.</p>
+            <h2>Faça Sua Encomenda</h2>
+            <form id="encomenda-form" onsubmit="confirmarEncomenda(event)">
+              <div class="form-group">
+                <label for="produto-select">Produto</label>
+                <select id="produto-select" name="produto" required>
+                  <option value="">Selecione um produto</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+              </div>
+              <button type="submit" class="submit-order-btn">Confirmar Encomenda</button>
+            </form>
+            <div id="resumo-encomenda" class="order-summary hidden">
+              <h3>Resumo da Encomenda</h3>
+              <p id="resumo-produto"></p>
+              <p id="resumo-quantidade"></p>
+              <p id="resumo-total"></p>
             </div>
-            <div class="order-summary">
-              <div class="total-section">
-                <strong>Total dos Produtos: R$ <span id="total-produtos">0,00</span></strong>
-              </div>
-              <div class="tarifa-section">
-                <strong>Tarifa de Entrega: R$ <span id="tarifa-entrega">0,00</span></strong>
-                <p id="tarifa-info" class="tarifa-info">Digite o CEP para calcular a tarifa.</p>
-              </div>
-              <div class="grand-total">
-                <strong>Total Geral: R$ <span id="total-geral">0,00</span></strong>
-              </div>
-            </div>
-            <button type="button" class="submit-order-btn" onclick="enviarAgendamento(event)">Enviar Encomenda via WhatsApp</button>
           </div>
         </div>
       </div>
@@ -145,6 +177,7 @@
     </div>
   </footer>
 
+  <script src="produtos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
