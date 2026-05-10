@@ -15,14 +15,15 @@ O projeto foi criado com foco em experiência do usuário, design moderno e pres
 
 # 📸 Preview do Projeto
 
-> Adicione aqui prints do projeto para deixar o README ainda mais profissional.
+<img width="1167" height="633" alt="Captura de tela 2026-05-02 193356" src="https://github.com/user-attachments/assets/492e7518-5a95-426e-9d4d-9177671989a0" />
 
-Sugestão:
+<img width="838" height="623" alt="Captura de tela 2026-05-10 095526" src="https://github.com/user-attachments/assets/082debc7-9380-4281-8bf8-167d085c7c16" />
 
-* Página inicial
-* Área de produtos
-* Layout responsivo mobile
-* Cards e seções principais
+<img width="840" height="606" alt="Captura de tela 2026-05-10 095639" src="https://github.com/user-attachments/assets/856b318f-4ac7-4e2b-b4cb-ea5a1aa8d115" />
+
+<img width="809" height="636" alt="Captura de tela 2026-05-10 095602" src="https://github.com/user-attachments/assets/4887cf0e-d70b-4d3e-8494-fec3064ccf66" />
+
+<img width="797" height="633" alt="Captura de tela 2026-05-10 095712" src="https://github.com/user-attachments/assets/5ed30265-432b-45ce-bef3-0df1f41a471e" />
 
 ---
 
